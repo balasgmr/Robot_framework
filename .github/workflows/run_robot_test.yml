@@ -23,9 +23,10 @@ jobs:
 
     - name: 🔧 Install ChromeDriver
       run: |
-        sudo apt install -y chromium-chromedriver
-        sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
-    
+        sudo apt install -y chromium-browser chromium-chromedriver
+        if [ ! -f /usr/bin/chromedriver ]; then
+          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+        fi
 
     - name: 🤖 Run Robot Framework tests
       run: |
