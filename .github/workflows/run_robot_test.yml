@@ -6,7 +6,7 @@ on:
 
 jobs:
   robot-tests:
-    runs-on: chrome-latest
+    runs-on: ubuntu-latest  # ✅ This ensures GitHub provides the runner
 
     steps:
     - name: 📥 Checkout code
