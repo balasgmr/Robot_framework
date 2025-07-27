@@ -23,7 +23,7 @@ jobs:
 
     - name: 🤖 Run Robot Framework tests
       run: |
-        robot -d results tests/   # Or replace `tests/` with correct test folder/file like R1.robot
+        robot -d results R1.robot/   # Or replace `tests/` with correct test folder/file like R1.robot
 
     - name: 📤 Upload Robot test reports
       uses: actions/upload-artifact@v4
