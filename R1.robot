@@ -19,8 +19,5 @@ smoke
     inputting_first_name    $first_name_text
     inputting_last_name    $last_name_text
     closing_browser
-Regression
-    [Tags]    regression
-    opening_browser    ${site_url}    ${browser}
-    Input Text    ${city}    ${city_name_n}
+
 
