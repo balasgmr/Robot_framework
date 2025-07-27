@@ -5,8 +5,13 @@ Variables    ../Locators.py
 *** Keywords ***
 opening_browser
     [Arguments]     ${site_url}    ${browser}
-    Open Browser    ${site_url}    ${browser}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Open Browser    ${site_url}    ${browser}    options=${options}
     Maximize Browser Window
+
 closing_browser
     Close All Browsers
 inputting_first_name

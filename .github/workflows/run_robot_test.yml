@@ -21,10 +21,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: 🔧 Install Google Chrome
+    - name: 🔧 Install ChromeDriver
       run: |
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+        sudo apt install -y chromium-chromedriver
+        sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+    
 
     - name: 🤖 Run Robot Framework tests
       run: |
