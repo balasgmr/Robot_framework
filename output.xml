@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-07-27T13:15:47.802357" rpa="false" schemaversion="5">
+<suite id="s1" name="R1" source="C:\Users\Bala\OneDrive\Desktop\PRACTICE_ROBOT\GIT\R1.robot">
+<test id="s1-t1" name="smoke" line="13">
+<kw name="opening_browser" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-27T13:15:48.049833" level="INFO">Opening browser 'chrome' to base url 'https://www.dummyticket.com/dummy-ticket-for-visa-application/'.</msg>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-27T13:15:48.049442" elapsed="6.231204"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-27T13:15:54.280935" elapsed="0.042567"/>
+</kw>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2025-07-27T13:15:48.048909" elapsed="6.274763"/>
+</kw>
+<kw name="inputting_first_name" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-27T13:15:54.325230" level="INFO">Typing text '$first_name_text' into text field '//*[@id='travname']'.</msg>
+<arg>${first_name_l}</arg>
+<arg>${first_name_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-27T13:15:54.324492" elapsed="0.231789"/>
+</kw>
+<arg>$first_name_text</arg>
+<status status="PASS" start="2025-07-27T13:15:54.324087" elapsed="0.232398"/>
+</kw>
+<kw name="inputting_last_name" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-27T13:15:54.557295" level="INFO">Typing text '$last_name_text' into text field '//*[@id='travlastname']'.</msg>
+<arg>${last_name}</arg>
+<arg>${last_name_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-27T13:15:54.557093" elapsed="0.077234"/>
+</kw>
+<arg>$last_name_text</arg>
+<status status="PASS" start="2025-07-27T13:15:54.556850" elapsed="0.077607"/>
+</kw>
+<kw name="closing_browser" owner="keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-07-27T13:15:54.635187" elapsed="2.179974"/>
+</kw>
+<status status="PASS" start="2025-07-27T13:15:54.634841" elapsed="2.180557"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2025-07-27T13:15:48.048376" elapsed="8.767655"/>
+</test>
+<status status="PASS" start="2025-07-27T13:15:47.803341" elapsed="9.013978"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="R1" id="s1" pass="1" fail="0" skip="0">R1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
