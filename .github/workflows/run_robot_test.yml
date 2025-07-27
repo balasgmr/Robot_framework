@@ -21,6 +21,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: 🔧 Install Google Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
     - name: 🤖 Run Robot Framework tests
       run: |
         robot -d results R1.robot/   # Or replace `tests/` with correct test folder/file like R1.robot
@@ -30,8 +35,5 @@ jobs:
       with:
         name: robot-report
         path: results
-    - name: 🔧 Install Google Chrome
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+
 

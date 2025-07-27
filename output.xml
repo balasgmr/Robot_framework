@@ -1,68 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-07-27T13:15:47.802357" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-07-27T14:23:50.507003" rpa="false" schemaversion="5">
 <suite id="s1" name="R1" source="C:\Users\Bala\OneDrive\Desktop\PRACTICE_ROBOT\GIT\R1.robot">
-<test id="s1-t1" name="smoke" line="13">
+<test id="s1-t1" name="smoke" line="16">
 <kw name="opening_browser" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-27T13:15:48.049833" level="INFO">Opening browser 'chrome' to base url 'https://www.dummyticket.com/dummy-ticket-for-visa-application/'.</msg>
+<msg time="2025-07-27T14:23:51.036815" level="INFO">Opening browser 'chrome' to base url 'https://www.dummyticket.com/dummy-ticket-for-visa-application/'.</msg>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-27T13:15:48.049442" elapsed="6.231204"/>
+<status status="PASS" start="2025-07-27T14:23:51.036599" elapsed="6.787233"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-27T13:15:54.280935" elapsed="0.042567"/>
+<status status="PASS" start="2025-07-27T14:23:57.824137" elapsed="0.031129"/>
 </kw>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
-<status status="PASS" start="2025-07-27T13:15:48.048909" elapsed="6.274763"/>
+<status status="PASS" start="2025-07-27T14:23:51.035950" elapsed="6.819437"/>
 </kw>
 <kw name="inputting_first_name" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-27T13:15:54.325230" level="INFO">Typing text '$first_name_text' into text field '//*[@id='travname']'.</msg>
+<msg time="2025-07-27T14:23:57.856819" level="INFO">Typing text '$first_name_text' into text field '//*[@id='travname']'.</msg>
 <arg>${first_name_l}</arg>
 <arg>${first_name_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-27T13:15:54.324492" elapsed="0.231789"/>
+<status status="PASS" start="2025-07-27T14:23:57.856110" elapsed="0.229513"/>
 </kw>
 <arg>$first_name_text</arg>
-<status status="PASS" start="2025-07-27T13:15:54.324087" elapsed="0.232398"/>
+<status status="PASS" start="2025-07-27T14:23:57.855721" elapsed="0.230022"/>
 </kw>
 <kw name="inputting_last_name" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-27T13:15:54.557295" level="INFO">Typing text '$last_name_text' into text field '//*[@id='travlastname']'.</msg>
+<msg time="2025-07-27T14:23:58.086830" level="INFO">Typing text '$last_name_text' into text field '//*[@id='travlastname']'.</msg>
 <arg>${last_name}</arg>
 <arg>${last_name_text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-27T13:15:54.557093" elapsed="0.077234"/>
+<status status="PASS" start="2025-07-27T14:23:58.086486" elapsed="0.171959"/>
 </kw>
 <arg>$last_name_text</arg>
-<status status="PASS" start="2025-07-27T13:15:54.556850" elapsed="0.077607"/>
+<status status="PASS" start="2025-07-27T14:23:58.086130" elapsed="0.172426"/>
 </kw>
 <kw name="closing_browser" owner="keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-07-27T13:15:54.635187" elapsed="2.179974"/>
+<status status="PASS" start="2025-07-27T14:23:58.259296" elapsed="2.186624"/>
 </kw>
-<status status="PASS" start="2025-07-27T13:15:54.634841" elapsed="2.180557"/>
+<status status="PASS" start="2025-07-27T14:23:58.259041" elapsed="2.187121"/>
 </kw>
 <tag>smoke</tag>
-<status status="PASS" start="2025-07-27T13:15:48.048376" elapsed="8.767655"/>
+<status status="PASS" start="2025-07-27T14:23:51.034733" elapsed="9.411961"/>
 </test>
-<status status="PASS" start="2025-07-27T13:15:47.803341" elapsed="9.013978"/>
+<test id="s1-t2" name="Regression" line="22">
+<kw name="opening_browser" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-27T14:24:00.451934" level="INFO">Opening browser 'chrome' to base url 'https://www.dummyticket.com/dummy-ticket-for-visa-application/'.</msg>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-27T14:24:00.451584" elapsed="6.471725"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-27T14:24:06.923590" elapsed="0.039785"/>
+</kw>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2025-07-27T14:24:00.450939" elapsed="6.512544"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-27T14:24:06.964194" level="INFO">Typing text 'chennai' into text field '//*[@id='billing_city']'.</msg>
+<arg>${city}</arg>
+<arg>${city_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-27T14:24:06.963946" elapsed="0.208611"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2025-07-27T14:24:00.449291" elapsed="6.723741"/>
+</test>
+<status status="PASS" start="2025-07-27T14:23:50.508363" elapsed="16.665713"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
 <stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="R1" id="s1" pass="1" fail="0" skip="0">R1</stat>
+<stat name="R1" id="s1" pass="2" fail="0" skip="0">R1</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-07-27T14:23:51.002393" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Users\Bala\OneDrive\Desktop\PRACTICE_ROBOT\GIT\R1.robot", line 0</msg>
+<msg time="2025-07-27T14:23:51.002571" level="ERROR">In source file:
+  File "../GIT/Excel/logindata.xlsx", line 0</msg>
+<msg time="2025-07-27T14:23:51.034344" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\Users\Bala\OneDrive\Desktop\PRACTICE_ROBOT\GIT\..\GIT\Excel\logindata.xlsx but file does not exist.</msg>
 </errors>
 </robot>
