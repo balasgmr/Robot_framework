@@ -30,3 +30,8 @@ jobs:
       with:
         name: robot-report
         path: results
+    - name: 🔧 Install Google Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
