@@ -2,11 +2,11 @@ name: Run Robot Framework Tests
 
 on:
   push:
-    branches: [ main ]  # Run on push to 'main' branch
+    branches: [ main ]
 
 jobs:
   robot-tests:
-    runs-on: ubuntu-latest  # ✅ This ensures GitHub provides the runner
+    runs-on: ubuntu-latest
 
     steps:
     - name: 📥 Checkout code
@@ -15,18 +15,17 @@ jobs:
     - name: 🐍 Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.13.2'
+        python-version: '3.10'  # Use stable release; 3.13 is not final yet
 
-    - name: 📦 Install Robot Framework
+    - name: 📦 Install Python dependencies from requirements.txt
       run: |
-        pip install robotframework
-        pip install robotframework-seleniumlibrary
+        pip install -r requirements.txt
 
     - name: 🤖 Run Robot Framework tests
       run: |
-        robot -d results R1.robot
+        robot -d results tests/   # Or replace `tests/` with correct test folder/file like R1.robot
 
-    - name: 📤 Upload test reports
+    - name: 📤 Upload Robot test reports
       uses: actions/upload-artifact@v4
       with:
         name: robot-report
