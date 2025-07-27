@@ -15,5 +15,7 @@ inputting_first_name
 inputting_last_name
     [Arguments]    ${last_name_text}
     Input Text    ${last_name}    ${last_name_text}
-regression_stage
+reg city
+    [Arguments]    ${city}   ${city_name}
+    Input Text     ${city}    ${city_name}
 
