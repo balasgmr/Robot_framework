@@ -8,7 +8,7 @@ ${site_url}    https://www.dummyticket.com/dummy-ticket-for-visa-application/
 ${browser}    chrome
 ${first_name_text}    test
 ${last_name_text}    last
-${city_name}    Chennai
+${city_name_n}    Chennai
 ${staging_url}    https://www.saucedemo.com/
 
 
@@ -22,5 +22,5 @@ smoke
 Regression
     [Tags]    regression
     opening_browser    ${site_url}    ${browser}
-    Input Text    ${city}    ${city_name}
+    Input Text    ${city}    ${city_name_n}
 
