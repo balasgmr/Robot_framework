@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../GIT/Resource/keywords.robot
+Resource    Resource/keywords.robot
 #Library    DataDriver    file=../GIT/Excel/logindata.xlsx
 
 *** Variables ***
