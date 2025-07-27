@@ -5,7 +5,7 @@ Variables    ../Locators.py
 *** Keywords ***
 opening_browser
     [Arguments]     ${site_url}    ${browser}
-    Open Browser    ${site_url}    ${browser}    options=add_argument(--headless)
+    Open Browser    ${site_url}    ${browser}
     Maximize Browser Window
 closing_browser
     Close All Browsers
