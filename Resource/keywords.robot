@@ -16,6 +16,6 @@ inputting_last_name
     [Arguments]    ${last_name_text}
     Input Text    ${last_name}    ${last_name_text}
 reg city
-    [Arguments]    ${city}   ${city_name}
-    Input Text     ${city}    ${city_name}
+    [Arguments]    ${city}   ${city_name_n}
+    Input Text     ${city}    ${city_name_n}
 
