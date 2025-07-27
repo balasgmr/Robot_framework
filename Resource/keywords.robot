@@ -10,9 +10,11 @@ opening_browser
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    binary_location    /snap/bin/chromium
+    # Set binary_location like this using Python expression
+    Evaluate    setattr(${options}, "binary_location", "/snap/bin/chromium")
     Open Browser    ${site_url}    ${browser}    options=${options}
     Maximize Browser Window
+
 
 closing_browser
     Close All Browsers
