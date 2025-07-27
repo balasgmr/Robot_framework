@@ -1,0 +1,33 @@
+name: Run Robot Framework Tests
+
+on:
+  push:
+    branches: [ main ]  # Run on push to 'main' branch
+
+jobs:
+  robot-tests:
+    runs-on: chrome-latest
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13.2'
+
+    - name: 📦 Install Robot Framework
+      run: |
+        pip install robotframework
+        pip install robotframework-seleniumlibrary
+
+    - name: 🤖 Run Robot Framework tests
+      run: |
+        robot -d results R1.robot
+
+    - name: 📤 Upload test reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-report
+        path: results
