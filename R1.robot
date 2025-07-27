@@ -8,7 +8,7 @@ ${site_url}    https://www.dummyticket.com/dummy-ticket-for-visa-application/
 ${browser}    chrome
 ${first_name_text}    test
 ${last_name_text}    last
-${city_name}    chennai
+${city_name}    Chennai
 ${staging_url}    https://www.saucedemo.com/
 
 
