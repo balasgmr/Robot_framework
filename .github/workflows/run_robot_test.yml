@@ -21,16 +21,15 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: 🔧 Install ChromeDriver
+    - name: 🔧 Install Google Chrome
       run: |
-        sudo apt install -y chromium-browser chromium-chromedriver
-        if [ ! -f /usr/bin/chromedriver ]; then
-          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
-        fi
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo apt install -y ./google-chrome-stable_current_amd64.deb
+    
 
     - name: 🤖 Run Robot Framework tests
       run: |
-        robot -d results R1.robot/   # Or replace `tests/` with correct test folder/file like R1.robot
+        robot -d results R1.robot/
 
     - name: 📤 Upload Robot test reports
       uses: actions/upload-artifact@v4

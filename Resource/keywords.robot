@@ -5,10 +5,12 @@ Variables    ../Locators.py
 *** Keywords ***
 opening_browser
     [Arguments]     ${site_url}    ${browser}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    Call Method    ${options}    add_argument    --headless
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    binary_location    /snap/bin/chromium
     Open Browser    ${site_url}    ${browser}    options=${options}
     Maximize Browser Window
 
